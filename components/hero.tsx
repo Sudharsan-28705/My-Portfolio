@@ -1,12 +1,22 @@
 "use client";
 
 const HeroSection = () => {
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Sudharsan CV.pdf"; // Make sure this file exists in public folder
+    link.download = "Sudharsan CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section
       id="hero"
       className="relative z-10 flex items-center justify-center min-h-screen
-             text-center px-6 gap-8 md:gap-12
-             flex-col md:flex-row"
+                 text-center px-6 gap-8 md:gap-12
+                 flex-col md:flex-row"
     >
 
       {/* Profile Image */}
@@ -16,7 +26,6 @@ const HeroSection = () => {
           alt="Sudharsan"
           className="rounded-full w-32 h-32 md:w-56 md:h-56 object-cover shadow-2xl border-4 border-white/20"
         />
-
       </div>
 
       {/* Text */}
@@ -29,7 +38,10 @@ const HeroSection = () => {
           A Frontend Developer building modern, responsive and interactive web experiences.
         </p>
 
-        <button className="px-6 py-3 bg-white text-black rounded-xl font-medium hover:scale-105 hover:bg-gray-200 transition-all duration-300 shadow-lg">
+        <button
+          onClick={handleDownload}
+          className="px-6 py-3 bg-white text-black rounded-xl font-medium hover:scale-105 hover:bg-gray-200 transition-all duration-300 shadow-lg"
+        >
           DOWNLOAD CV
         </button>
       </div>
