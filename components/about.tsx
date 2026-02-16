@@ -33,7 +33,6 @@ const AboutSection = () => {
       },
     });
 
-    // Reveal paragraphs one by one
     paragraphs.forEach((p) => {
       tl.to(p, { opacity: 1, y: 0, duration: 1 });
     });
@@ -51,7 +50,6 @@ const AboutSection = () => {
     >
       <div className="max-w-6xl w-full">
 
-        {/* Heading (CENTERED) */}
         <div className="mb-10 text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-white pt-[5rem]">
             About Me
@@ -59,10 +57,8 @@ const AboutSection = () => {
           <div className="mt-4 mx-auto w-20 md:w-24 h-[2px] bg-white/30" />
         </div>
 
-        {/* Content */}
         <div className="grid md:grid-cols-2 gap-8 items-start">
 
-          {/* Left */}
           <div
             ref={leftCol}
             className="space-y-5 text-lg md:text-xl text-gray-300 leading-relaxed"
@@ -89,7 +85,6 @@ const AboutSection = () => {
             </p>
           </div>
 
-          {/* Right */}
           <div
             ref={rightCol}
             className="space-y-5 text-lg md:text-xl text-gray-300 leading-relaxed"

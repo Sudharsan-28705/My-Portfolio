@@ -40,7 +40,6 @@ export default function Home() {
         />
       </div>
       <div className="absolute inset-0 bg-black/40 -z-10" />
-      {/* Content */}
       <Hero />
       <About/>
       <Projects/>

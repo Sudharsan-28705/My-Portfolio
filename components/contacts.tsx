@@ -18,7 +18,6 @@ const Contact = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        {/* Header */}
         <div className="mb-16 text-center ">
           <h2 className="text-4xl md:text-6xl font-bold text-white">
             Contact Me
@@ -26,7 +25,6 @@ const Contact = () => {
           <div className="mt-4 mx-auto w-20 md:w-24 h-[2px] bg-white/30" />
         </div>
 
-        {/* Description */}
         <div className="text-gray-200 text-lg leading-relaxed max-w-2xl mx-auto mb-14">
           <p>
             I’m currently looking for opportunities such as internships and
@@ -38,7 +36,6 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Icons */}
         <motion.div
           className="flex items-center justify-center gap-10"
           initial={{ opacity: 0 }}
@@ -46,7 +43,7 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          {/* GitHub */}
+
           <a
             href="https://github.com/Sudharsan-28705"
             target="_blank"
@@ -60,7 +57,6 @@ const Contact = () => {
             </div>
           </a>
 
-          {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/sudharsan-s-a374aa293"
             target="_blank"
@@ -74,7 +70,6 @@ const Contact = () => {
             </div>
           </a>
 
-          {/* Email */}
           <a
             href="mailto:sudharsan.panimalarit@gmail.com"
             aria-label="Email"
@@ -87,9 +82,8 @@ const Contact = () => {
             </div>
           </a>
 
-          {/* WhatsApp */}
           <a
-            href="https://wa.me/919345404660" // TODO: add your WhatsApp link here
+            href="https://wa.me/919345404660"
             aria-label="WhatsApp"
             className="group"
           >
@@ -100,9 +94,8 @@ const Contact = () => {
             </div>
           </a>
 
-          {/* Instagram */}
           <a
-            href="https://www.instagram.com/_._iam_soos_._/" // TODO: add your Instagram link here
+            href="https://www.instagram.com/_._iam_soos_._/"
             aria-label="Instagram"
             className="group"
           >

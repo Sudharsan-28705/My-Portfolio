@@ -4,7 +4,7 @@ const HeroSection = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Sudharsan CV.pdf"; // Make sure this file exists in public folder
+    link.href = "/Sudharsan CV.pdf";
     link.download = "Sudharsan CV.pdf";
     document.body.appendChild(link);
     link.click();
@@ -19,7 +19,6 @@ const HeroSection = () => {
                  flex-col md:flex-row"
     >
 
-      {/* Profile Image */}
       <div>
         <img
           src="/Profile.png"
@@ -28,7 +27,6 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* Text */}
       <div className="max-w-xl">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white/50 via-gray-400 to-gray-500 bg-clip-text text-transparent">
           Hi, I'm Sudharsan
