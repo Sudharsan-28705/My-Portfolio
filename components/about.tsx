@@ -52,7 +52,7 @@ const AboutSection = () => {
       <div className="max-w-6xl w-full">
 
         {/* Heading (CENTERED) */}
-        <div className="mb-16 text-center">
+        <div className="mb-10 text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-white">
             About Me
           </h2>
@@ -60,12 +60,12 @@ const AboutSection = () => {
         </div>
 
         {/* Content */}
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-8 items-start">
 
           {/* Left */}
           <div
             ref={leftCol}
-            className="space-y-8 text-lg md:text-xl text-gray-300 leading-relaxed"
+            className="space-y-5 text-lg md:text-xl text-gray-300 leading-relaxed"
           >
             <p className="reveal">
               I’m a frontend developer driven by{" "}
@@ -92,7 +92,7 @@ const AboutSection = () => {
           {/* Right */}
           <div
             ref={rightCol}
-            className="space-y-8 text-lg md:text-xl text-gray-300 leading-relaxed"
+            className="space-y-5 text-lg md:text-xl text-gray-300 leading-relaxed"
           >
             <p className="reveal">
               My goal is to become a{" "}
