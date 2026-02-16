@@ -118,9 +118,9 @@ const Skills = () => {
     <section
       ref={sectionRef}
       id="skills"
-      className="relative z-10 min-h-screen flex items-center px-6"
+      className="relative z-10 flex items-center px-6 pt-[6rem]"
     >
-      <div className="max-w-6xl mx-auto w-full pt-[6rem]">
+      <div className="max-w-6xl mx-auto w-full ">
 
         <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-white">

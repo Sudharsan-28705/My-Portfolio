@@ -46,14 +46,14 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative z-10 min-h-screen flex items-center justify-center px-6"
+      className="relative z-10 flex items-center justify-center px-6"
       id="about"
     >
       <div className="max-w-6xl w-full">
 
         {/* Heading (CENTERED) */}
         <div className="mb-10 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-white">
+          <h2 className="text-4xl md:text-6xl font-bold text-white pt-[5rem]">
             About Me
           </h2>
           <div className="mt-4 mx-auto w-20 md:w-24 h-[2px] bg-white/30" />

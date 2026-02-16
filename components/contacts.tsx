@@ -10,7 +10,7 @@ const iconClass =
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative z-10 min-h-screen flex items-center justify-center px-6">
+    <section id="contact" className="relative z-10 flex items-center justify-center px-6 md:pt-[6rem] pt-[5rem] pb-[3rem]">
       <motion.div
         className="max-w-4xl w-full text-center"
         initial={{ opacity: 0, y: 24 }}
@@ -19,7 +19,7 @@ const Contact = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         {/* Header */}
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-center ">
           <h2 className="text-4xl md:text-6xl font-bold text-white">
             Contact Me
           </h2>

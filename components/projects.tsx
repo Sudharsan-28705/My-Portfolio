@@ -63,11 +63,11 @@ const Projects = () => {
     <section
       ref={sectionRef}
       id="projects"
-      className="relative z-10 min-h-screen flex items-center justify-center px-6 md:px-20 "
+      className="relative z-10 flex items-center justify-center px-6 md:pt-[6rem]"
     >
       <div ref={contentRef} className="w-full">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-white pt-[3rem]">
+          <h2 className="text-4xl md:text-6xl font-bold text-white ">
             My Projects
           </h2>
           <div className="mt-4 mx-auto w-20 md:w-24 h-[2px] bg-white/30" />
@@ -77,7 +77,7 @@ const Projects = () => {
           {projects.map((p, i) => (
             <div
               key={i}
-              className="w-full max-w-[420px] md:w-[420px] h-[350px] backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col justify-between hover:-translate-y-3 transition"
+              className="w-full max-w-[420px] md:w-[420px] h-[250px]  backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col justify-between hover:-translate-y-3 transition"
             >
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-4">
