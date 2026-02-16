@@ -29,64 +29,61 @@ const projects = [
 
 const Projects = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (window.innerWidth < 768) return; // ⛔ disable GSAP on mobile
+    if (!sectionRef.current || !contentRef.current) return;
 
-    const section = sectionRef.current;
-    const container = containerRef.current;
-    if (!section || !container) return;
-
-    const totalWidth = container.scrollWidth;
-
-    gsap.to(container, {
-      x: () => -(totalWidth - window.innerWidth),
-      ease: "none",
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => `+=${totalWidth}`,
-        scrub: 1,
-        pin: true,
-        anticipatePin: 1,
+    gsap.fromTo(
+      contentRef.current,
+      {
+        y: 100,
+        opacity: 0,
       },
-    });
+      {
+        y: 0,
+        opacity: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 40%",
+          end: "top 30%",
+          scrub: 0.7,
+          pin: true
+        },
+      }
+    );
 
     return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+      ScrollTrigger.getAll().forEach(t => t.kill());
     };
   }, []);
 
   return (
-    <section ref={sectionRef} id="projects" className="relative z-10 min-h-screen">
+    <section
+      ref={sectionRef}
+      id="projects"
+      className="relative z-10 min-h-screen flex items-center justify-center px-6 md:px-20"
+    >
+      <div ref={contentRef} className="w-full">
+        <div className="mb-12 text-center">
+          <h2 className="text-4xl md:text-6xl font-bold text-white">
+            My Projects
+          </h2>
+          <div className="mt-4 mx-auto w-20 md:w-24 h-[2px] bg-white/30" />
+        </div>
 
-      {/* Header */}
-      <div className="mb-16 text-center">
-        <h2 className="text-4xl md:text-6xl font-bold text-white">
-          My Projects
-        </h2>
-        <div className="mt-4 mx-auto w-20 md:w-24 h-[2px] bg-white/30" />
-      </div>
-
-      {/* Horizontal Scroll */}
-      <div className="h-screen flex items-start">
-
-        <div
-          ref={containerRef}
-          className="flex flex-col md:flex-row gap-10 md:gap-16 px-6 md:px-20 pt-16 md:pt-24"
-
-        >
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 justify-center items-center">
           {projects.map((p, i) => (
             <div
               key={i}
-              className="w-[600px] h-[350px] backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-10 flex flex-col justify-between hover:-translate-y-4 transition"
+              className="w-full max-w-[420px] md:w-[420px] h-[350px] backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col justify-between hover:-translate-y-3 transition"
             >
               <div>
-                <h3 className="text-3xl font-semibold text-white mb-6">
+                <h3 className="text-2xl font-semibold text-white mb-4">
                   {p.title}
                 </h3>
-                <p className="text-gray-300 mb-6">{p.description}</p>
+                <p className="text-gray-300 mb-4">{p.description}</p>
                 <p className="text-sm text-gray-400">{p.role}</p>
               </div>
               <a
@@ -105,3 +102,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

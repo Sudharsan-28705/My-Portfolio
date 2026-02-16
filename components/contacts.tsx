@@ -27,7 +27,7 @@ const Contact = () => {
         </div>
 
         {/* Description */}
-        <div className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-14">
+        <div className="text-gray-200 text-lg leading-relaxed max-w-2xl mx-auto mb-14">
           <p>
             I’m currently looking for opportunities such as internships and
             freelance projects where I can apply my skills and grow through
