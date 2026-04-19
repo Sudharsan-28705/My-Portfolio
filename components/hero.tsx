@@ -4,7 +4,7 @@ const HeroSection = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Sudharsan CV.pdf";
+    link.href = "/Sudharsan Resume.pdf";
     link.download = "Sudharsan Resume.pdf";
     document.body.appendChild(link);
     link.click();
