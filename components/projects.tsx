@@ -20,10 +20,10 @@ const projects = [
     github: "https://github.com/Sudharsan-28705/Fraemi-Vision/tree/testing",
   },
   {
-    title: "EV Recharge Bunk",
-    description: "EV charging locator platform (WIP).",
+    title: "Charge x Point",
+    description: "EV charging locator platform and slot booking app.",
     role: "Team Lead",
-    github: "https://github.com/Sudharsan-28705/EV-Recharge-Bunk",
+    github: "https://github.com/Sudharsan-28705/chargexpoint",
   },
 ];
 
